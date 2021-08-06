@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
-          <Route exact path="/react-portfolio"> <Home /> </Route>
+          <Route exact path="/react-portfolio" component={Home} />
         </Switch>
       </Router>
     </div>

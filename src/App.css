@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+/* overall styling that every page will use */
+/* mobile-first design utilizing media query breakpoints for containers */
+/* specific page styling is left to specifc css styles that also handle media queries for that page */
+
+@font-face {
+  font-family: avenir;
+  src: url(./avenir/AvenirLTStd-Roman.otf);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* so far, everything has this font */
+/* can go through and specify per element if more fonts are added later */
+* {
+  font-family: avenir;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+body {
+  margin: 0px;
+  background-color: whitesmoke;
+}
+
+/* container for extra small, small, and medium devices */
+/* this is so that the page has style for phones and tablets and another style for computers */
+.container {
+  max-width: 90%;
+  margin: auto;
+}
+
+/* containers change their max width for large extra large devices (computers) */
+/* also creates a nice margin on bigger devies for readability of content */
+@media (min-width: 992px) {
+  .container {
+      max-width: 960px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (min-width: 1200px) {
+  .container {
+      max-width: 1140px;
   }
 }

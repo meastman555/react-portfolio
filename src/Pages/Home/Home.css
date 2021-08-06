@@ -1,3 +1,36 @@
-.home-div {
-    background-color: red;
+/* home page stuff */
+/* all ported over from current portfolio but subject to change */
+.header {
+    padding: 20px 10px;
+    background-image: url(./Controllers.jpg);
+    background-size: cover;
+}
+
+/* keep font size at VH for now?? This would scale without use of media queries I think */
+.header_text {
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.title {
+    font-size: 10vh;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 4vh;
+    font-style: italic;
+}
+
+@media (min-width: 992px) {
+    .header {
+        padding: 50px;
+    }
+
+    .title {
+        margin: 30px 0px;
+    }
 }
